@@ -1,12 +1,12 @@
-package com.example.tryakkahttpscalajs
+package com.example.tryakkahttpscalajs.routes
 
-import akka.http.scaladsl.server.Directives
+import akka.http.scaladsl.server.{Directives, Route}
 import com.example.tryakkahttpscalajs.shared.SharedMessages
 import com.example.tryakkahttpscalajs.twirl.Implicits._
 
 class WebService() extends Directives {
 
-  val route = {
+  val route: Route = {
     pathSingleSlash {
       get {
         complete {
